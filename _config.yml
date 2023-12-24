@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Gazeek's b;pg # the main title
+title: Gazeek's blog # the main title
 
 tagline: Math and other things # it will display as the sub-title
 
@@ -73,7 +73,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://avatars.githubusercontent.com/u/1235921?v=4
 
 # boolean type, the global switch for TOC in posts.
 toc: true
