@@ -71,3 +71,5 @@ I would like to really thank @cotes2020 the creator of [Chirpy Jekyll Theme](htt
 ## License
 
 This project is published under [MIT License][license].
+
+[license]: https://github.com/gazeek/gazeek.github.io/blob/main/LICENSE
