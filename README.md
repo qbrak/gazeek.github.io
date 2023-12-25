@@ -70,4 +70,4 @@ I would like to really thank @cotes2020 the creator of [Chirpy Jekyll Theme](htt
 
 ## License
 
-This work is published under [MIT][mit] License.
+This project is published under [MIT License][license].
