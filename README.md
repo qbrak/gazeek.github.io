@@ -1,56 +1,73 @@
-# Chirpy Starter
+# Gazeek's blog
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+A simple mathy oriented blog based on [Chirpy Jekyll Theme](https://github.com/cotes2020/jekyll-theme-chirpy#documentation)
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+The main difference is support for plotly with template that follows the light/dark theme of **Chirpy**.
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+## Using plotly
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+We need to first turn on plotly in [Front Matter](https://jekyllrb.com/docs/front-matter/)
+```yaml
+---
+plotly: true
+---
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+Then the example is adapted from [plotly documentation](https://plotly.com/javascript/getting-started/). 
 
-## Prerequisites
+We start by creating the appropriate location for the plot, can be as simple as:
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of
-the basic environment. [Git](https://git-scm.com/) also needs to be installed.
-
-## Installation
-
-Sign in to GitHub and [**use this template**][use-template] to generate a brand new repository and name it
-`USERNAME.github.io`, where `USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```console
-$ bundle
+```html
+<div id="tester">
+</div>
 ```
 
-## Usage
+By default the template will be handled by the website to match the light/dark theme, to alter this behavior set:
 
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+```html
+<div id="tester" data-plotly-skip-relayout="true">
+</div>
+
+```
+
+Next, you need to write the actual javascript code to generate your plot:
+
+```html
+<script type="text/javascript">
+
+  TESTER = document.getElementById('tester');
+
+  // mousewheel or two-finger scroll zooms the plot
+
+  var trace1 = {
+    x:['2020-10-04', '2021-11-04', '2023-12-04'],
+    y: [90, 40, 60],
+    type: 'scatter'
+  };
+
+  var data = [trace1];
+
+  var layout = {
+    title: 'Scroll and Zoom',
+    showlegend: false
+  };
+
+  const config = getPlotlyConfig();
+
+  Plotly.newPlot(TESTER, data, layout, config);
+
+</script> 
+```
+
+The function `getPlotlyConfig()` returns a "good default" config for the plots.
+I was hoping that I could use `Plotly.setPlotConfig()` to set good defaults, however, it seems it is used for some other purpose.
+
+
+## Credits
+
+I would like to really thank @cotes2020 the creator of [Chirpy Jekyll Theme](https://github.com/cotes2020/jekyll-theme-chirpy) because it has been super easy to get started with his theme and edit it for my purposes.
 
 ## License
 
 This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
