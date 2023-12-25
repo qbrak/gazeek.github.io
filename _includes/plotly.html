@@ -1,0 +1,49 @@
+<!-- plotly-js loader -->
+<script type="text/javascript">
+  (function () {
+
+    function setPlotlyLayout(layout) {
+      const elements = document.querySelectorAll('.js-plotly-plot');
+      elements.forEach(function (elem) {
+        const id = elem.id;
+        if (elem.getAttribute('data-plotly-skip-relayout') !== 'true') {
+          Plotly.relayout(id, layout);
+        }
+      });
+    }
+
+    function updatePlotly(event) {
+      if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
+        const mode = event.data.message;
+
+        if (typeof plotlyInitialized === 'undefined') {
+          return;
+        }
+
+        let expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
+        const template = getPlotlyTemplate(expectedTheme);
+        const layout = {template: template};
+
+        setPlotlyLayout(layout)
+      }
+    }
+
+    let initTheme = 'default';
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') && html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = 'dark';
+    }
+
+    const template = getPlotlyTemplate(initTheme);
+    const layout = {template: template};
+    setPlotlyLayout(layout)
+
+    window.addEventListener('message', updatePlotly);
+
+    let plotlyInitialized = true;
+  })();
+</script>
