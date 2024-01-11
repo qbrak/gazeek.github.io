@@ -82,7 +82,14 @@
           displayMath: [
             ['$$', '$$'],
             ['\\[', '\\]']
-          ]
+          ],
+          {% if page.number_equations %}
+            /* equation numbering */
+            tags: 'ams'
+          {% else %}
+            /* by default don't number equations */
+            tags: 'none'
+          {% endif %}
         }
       };
     </script>
