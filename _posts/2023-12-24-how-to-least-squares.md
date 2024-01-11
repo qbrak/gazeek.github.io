@@ -133,7 +133,7 @@ Thus now we can evaluate a more realistic company *B* that has the following rev
 </div>
 
 <script type="text/javascript">
-  // Want to share data between different plots
+  /* Want to share data between different plots */
   pl_N = 20;
   pl_startX = 2000;
   pl_startY = 100;
