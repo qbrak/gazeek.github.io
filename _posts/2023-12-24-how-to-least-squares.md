@@ -79,10 +79,7 @@ Now if the revenue is $R_n$ as the revenue in year $2000+n$ (e.g. 2010) then we 
 
 If the the growth rate is constant when transitioning from one year to the next, then we can write the revenue for year $n$ as:
 
-\begin{equation}
-  R_{n} = R_{n-1} * (1 + g\%) = R_{n-2} * (1 + g\%)^2 = \dots = R_{0} * (1 + g\%)^{n}
-  \label{eq:growth_ratio}
-\end{equation}
+$$  R_{n} = R_{n-1} * (1 + g\%) = R_{n-2} * (1 + g\%)^2 = \dots = R_{0} * (1 + g\%)^{n} $$
 
 Thus we get:
 
@@ -95,7 +92,10 @@ Since we are taking $(1 + g\%)$ to the power $n$ we say that $R_n$ is growing ex
 
 For now, let's get back to \eqref{eq:revenue_const}, since we can rewrite it to get $g\%$:
 
-$$ R_{n+1} = R_{n} * (1 + g\%) \Rightarrow g\% = \frac{R_{n+1}}{R_{n}} - 1 $$
+\begin{equation}
+  R_{n+1} = R_{n} * (1 + g\%) \Rightarrow g\% = \frac{R_{n+1}}{R_{n}} - 1 
+  \label{eq:growth_ratio}
+\end{equation}
 
 Now we can calculate $g\%$ for each year (only shown up till 2009):
 
