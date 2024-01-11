@@ -145,8 +145,6 @@ Thus now we can evaluate a more realistic company *B* that has the following rev
     pl_revenue[i+1] = pl_revenue[i] *(1 + pl_growth[i]/100);
   });
  
-  console.log(pl_revenue.map(x => Math.log(x)))
-
   deferPlotly(function () {
     plotName = document.getElementById('real-plot');
 
