@@ -36,15 +36,15 @@
     }
 
     const template = getPlotlyTemplate(initTheme);
-    // Passed between calls to updatePlotly
+    /* Passed between calls to updatePlotly */
     const layout = {template: template};
 
     Promise.all(plotlyDeferredFuncArray.map(f => f()))
       .then((results) => {
-        // We need to wait until all the promises are resolved
-        // before relaying out all the plots or Plotly can hang.
+        /* We need to wait until all the promises are resolved   */
+        /* before relaying out all the plots or Plotly can hang. */
         relayoutPlots(layout);
-      })
+      });
 
     window.addEventListener('message', updatePlotly);
   })();
