@@ -68,59 +68,59 @@ On a plot it looks like:
   });
 </script> 
 
-If the company revenue was growing linearly, then the revenue could fit on a line, however, it doesn't seem to be the case. The revenue seems to be growing faster than linearly. This does make sense, because you expect revenue growth to be dependent on the revenue from the previous year, and this might be a fraction, which we could call $g$ - for growth. If you know that over the past 20 years the company has been growing by $g\%$ then you can try to predict what will be the revenue next year, and the year after that, and so on. So let's try to find $g\%$.
+If the company revenue was growing linearly, then the revenue could fit on a line, however, it doesn't seem to be the case. The revenue seems to be growing faster than linearly. This does make sense, because you expect revenue growth to be dependent on the revenue from the previous year, and this might be a fraction, which we could call $g$ - for growth. If you know that over the past 20 years the company has been growing by $g$ then you can try to predict what will be the revenue next year, and the year after that, and so on. So let's try to find $g$.
 
 Now if the revenue is $R_n$ as the revenue in year $2000+n$ (e.g. 2010) then we could write that:
 
 \begin{equation}
-  R_{n+1} = R_{n} * (1 + g\%)
+  R_{n+1} = R_{n}  + g \cdot R_{n} = R_{n} \cdot (1 + g)
   \label{eq:revenue_const}
 \end{equation}
 
-If the the growth rate is constant when transitioning from one year to the next, then we can write the revenue for year $n$ as:
+If the growth rate is constant when transitioning from one year to the next, then we can write the revenue for year $n$ as:
 
-$$  R_{n} = R_{n-1} * (1 + g\%) = R_{n-2} * (1 + g\%)^2 = \dots = R_{0} * (1 + g\%)^{n} $$
+$$  R_{n} = R_{n-1} \cdot (1 + g) = R_{n-2} \cdot (1 + g)^2 = \dots = R_{0} \cdot (1 + g)^{n} $$
 
 Thus we get:
 
 \begin{equation}
-  R_{n} = R_{0} * (1 + g\%)^{n}
+  R_{n} = R_{0} \cdot (1 + g)^{n}
   \label{eq:revenue_exp}
 \end{equation}
 
-Since we are taking $(1 + g\%)$ to the power $n$ we say that $R_n$ is growing exponentially. We will come back to this later...
+Since we are taking $(1 + g)$ to the power $n$ we say that $R_n$ is growing exponentially. We will come back to this later...
 
-For now, let's get back to \eqref{eq:revenue_const}, since we can rewrite it to get $g\%$:
+For now, let's get back to \eqref{eq:revenue_const}, since we can rewrite it to get $g$:
 
 \begin{equation}
-  R_{n+1} = R_{n} * (1 + g\%) \Rightarrow g\% = \frac{R_{n+1}}{R_{n}} - 1 
+  R_{n+1} = R_{n} \cdot (1 + g) \Rightarrow g = \frac{R_{n+1}}{R_{n}} - 1 
   \label{eq:growth_ratio}
 \end{equation}
 
-Now we can calculate $g\%$ for each year (only shown up till 2009):
+Now we can calculate $g$ for each year (only shown up till 2009):
 
-| Year | Revenue ($M) | $g\%$ | Year | Revenue ($M) | $g\%$ |
-| ---- | ------------ | ----- | ---- | ------------ | ----- |
-| 2000 | 100          |       | 2005 | 201          | 15%   |
-| 2001 | 115          | 15%   | 2006 | 231          | 15%   |
-| 2002 | 132          | 15%   | 2007 | 266          | 15%   |
-| 2003 | 152          | 15%   | 2008 | 306          | 15%   |
-| 2004 | 175          | 15%   | 2009 | 352          | 15%   |
+| Year | Revenue ($M) | $g\[\%\]$ | Year | Revenue ($M) | $g\[\%\]$ |
+| ---- | ------------ | -----     | ---- | ------------ | -----     |
+| 2000 | 100          |           | 2005 | 201          | 15%       |
+| 2001 | 115          | 15%       | 2006 | 231          | 15%       |
+| 2002 | 132          | 15%       | 2007 | 266          | 15%       |
+| 2003 | 152          | 15%       | 2008 | 306          | 15%       |
+| 2004 | 175          | 15%       | 2009 | 352          | 15%       |
 
-Great! It seems like we are done because we have found a constant value of $g\%=15\%$ which perfectly matches the data. Since this value held in the past we can assume that it will hold in the future as well.
+Great! It seems like we are done because we have found a constant value of $g\[\%\]=15\%$ which perfectly matches the data. Since this value held in the past we can assume that it will hold in the future as well.
 
 ## Realistic case
 
-However, this data set is a bit idealized... in real life the revenue might not grow at a constant rate from year to year. It might increase or decrease based on the economy, management, political situation and so on. To account for this we can define $g_n\%$ as the precent growth from year $n$ to year $n+1$. Then we can improve \eqref{eq:growth_ratio} to get:
+However, this data set is a bit idealized... in real life the revenue might not grow at a constant rate from year to year. It might increase or decrease based on the economy, management, political situation and so on. To account for this we can define $g_n$ as the precent growth from year $n$ to year $n+1$. Then we can improve \eqref{eq:growth_ratio} to get:
 
 \begin{equation}
-  g_{\textcolor{red}{n}}\% = \frac{R_{n+1}}{R_{n}} - 1
+  g_{\textcolor{red}{n}} = \frac{R_{n+1}}{R_{n}} - 1
   \label{eq:revenue_var}
 \end{equation}
 
 Thus now we can evaluate a more realistic company *B* that has the following revenue data:
 
-| Year | Revenue ($M) | $g_n\%$ | Year | Revenue ($M) | $g_n\%$ | Year | Revenue ($M) | $g_n\%$ | Year | Revenue ($M) | $g_n\%$ |
+| Year | Revenue ($M) | $g_n\[\%\]$ | Year | Revenue ($M) | $g_n\[\%\]$ | Year | Revenue ($M) | $g_n\[\%\]$ | Year | Revenue ($M) | $g_n\[\%\]$ |
 | ---- | ------------ | -----   | ---- | ------------ | -----   | ---- | ------------ | -----   | ---- | ------------ | -----   |
 | 2000 | 100          |         | 2005 | 207          | 20%     | 2010 | 397          | 16%     | 2015 | 723          | 12%     |
 | 2001 | 115          | 15%     | 2006 | 197          | -5%     | 2011 | 464          | 17%     | 2016 | 846          | 17%     |
@@ -176,18 +176,18 @@ Thus now we can evaluate a more realistic company *B* that has the following rev
 </script> 
 
 On the plot you can see that last year company *B* took a loss of \\$60M which is almost it's total revenue in 2000.
-With all this volatility we would still like to be able to determine how the company has done as a whole in the last 20 years and determine what is its likely future trajectory, thus we want a $g\%$ that is constant and best fits the data. One way to trye to achieve this is called Compand Annual Growth Rate (CAGR).
+With all this volatility we would still like to be able to determine how the company has done as a whole in the last 20 years and determine what is its likely future trajectory, thus we want a $g$ that is constant and best fits the data. One way to try to achieve this is called Compound Annual Growth Rate (CAGR).
 
 If we used the formula from [Wikipedia](https://en.wikipedia.org/wiki/Compound_annual_growth_rate) we could write:
 
 \begin{equation}
-  g_{CAGR} = CAGR(R_{2000}, R_{2019}) = \left(\frac{R_{0}}{R_{19}}\right)^{\frac{1}{2019-2000}} - 1
+  g_{CAGR} = CAGR(2000, 2019) = \left(\frac{R_{0}}{R_{19}}\right)^{\frac{1}{2019-2000}} - 1
   \label{eq:cagr}
 \end{equation}
 
 Where $g_{CAGR}$ is the estimate of growth $g$ using CAGR, $R_{0}$ is the revenue in 2000 and $R_{19}$ is the revenue in 2019.
 
-This gives us a $g_{CAGR}\% = 13\%$, but is it the best estimate? We can see on the revenue plot that company *B* took a large hit last year and CAGR is very sensitive to the most recent data. Maybe we can find an estimate that minimizes the amount of variation (noise) in the data? The answer is yes, and we can do this by using the least squares method.
+This gives us a $g_{CAGR}\[\%\] = 13\%$, but is it the best estimate? We can see on the revenue plot that company *B* took a large hit last year and CAGR is very sensitive to the most recent data. Maybe we can find an estimate that minimizes the amount of variation (noise) in the data? Yes we can, by using the least squares method.
 
 The next problem we have is that least squares method tries to fit a straight line to the data, but our data bends upwards and is not a straight line! So what can we do? We can take advantage of the logarithm function!
 
@@ -212,16 +212,16 @@ Thus, because the exponent is a one-to-one function we can write:
 
 $$\log(x \cdot y) = \log(x) + \log(y)$$
 
-This means that $\log(c \cdot x^n) = \log(x) \cdot n + \log(c)$, so if we had constant growth our equation \eqref{eq:revenue_const} would look like:
+This means that $\log(c \cdot x^n) = \log(c) + \log(x) \cdot n$, so if we had constant growth our equation \eqref{eq:revenue_const} would look like:
 
 \begin{equation}
-  R_{n} = R_{0} * (1 + g\%)^{n} \Rightarrow \log(R_{n}) = \log(1 + g\%) \cdot n + \log(R_{0})
+  R_{n} = R_{0} \cdot (1 + g)^{n} \Rightarrow \log(R_{n}) = \log(R_{0}) + \log(1 + g) \cdot n 
 \end{equation}
 
-We can define constants $a = \log(1 + g\%)$ and $b = \log(R_{0})$, thus the $\log()$ function has transformed our exponential euqation into a linear equation:
+We can define constants $a = \log(1 + g)$ and $b = \log(R_{0})$, thus the $\log()$ function has transformed our exponential euqation into a linear equation:
 
 \begin{equation}
-  \log(R_{n}) = a \cdot n + b
+  \log(R_{n}) = b + a \cdot n = a \cdot n + b
   \label{eq:revenue_log}
 \end{equation}
 
@@ -229,7 +229,7 @@ We can define constants $a = \log(1 + g\%)$ and $b = \log(R_{0})$, thus the $\lo
 
 A quick recap of where we are:
 1. We want to find a $g\%$ that best fits annual increase of revenue for company *B* to predict future revenue
-2. We tried using CAGR to estimate $g\%$ but it only looks at the start and end points, which might not be representative
+2. We tried using CAGR to estimate $g$ but it only looks at the start and end points, which might not be representative
 3. Since the year-to-year growth is proportional $\Rightarrow$ we get an exponential function (see \eqref{eq:revenue_exp})
 4. We can use the logarithm function to turn the exponential function into a linear function (see \eqref{eq:revenue_log})
 
@@ -467,9 +467,9 @@ Now we exponentiate all the values to get the actual revenue:
 
 Now we can see how much the actual revenues differ based on the different fits.
 
-The predicted values are for exponential functions in accordance with \eqref{eq:revenue_exp}. Thus when we create a model we define both $g\%$ and $R_0$ (revenue in 2000). Summarizing the fits in the table below we get:
+The predicted values are for exponential functions in accordance with \eqref{eq:revenue_exp}. Thus when we create a model we define both $g$ and $R_0$ (revenue in 2000). Summarizing the fits in the table below we get:
 
-| Name          | Symbol       | $g\%$  | $R_0$  | $R_{19}$ |
+| Name          | Symbol       | $g\[\%\]$  | $R_0$  | $R_{19}$ |
 | ------------- | ------------ | ------ | ------ | -------- |
 | least squares | $g_{LS}\%$   | 13.28% | 105.3  | 1312     |
 | CAGR          | $g_{CAGR}\%$ | 13.34% | 100    | 1080     |
@@ -479,7 +479,7 @@ You might notice something very weird, namely that even though $g_{LS} < g_{CAGR
 
 If we were to give more importance to any data point we could end up with results that vary depending on the time frame we chose for generating the model. We can illustrate this point best by cherry-picking the dates for which we calculate CAGR. Here are some examples:
  
-| Start year | End year | Years ($n$)   | $CAGR\%$ | $R_0$  | $R_{n}$  |
+| Start year | End year | Years ($n$)   | $CAGR\[\%\]$ | $R_0$  | $R_{n}$  |
 | ---------- | -------- | ------------- | -------- | ------ | -------- |
 | 2000       | 2019     | 19            | 13.34%   | 100    | 1080     |
 | 2013       | 2019     | 6             | 10.8%    | 680    | 1080     |
