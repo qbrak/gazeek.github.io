@@ -91,15 +91,13 @@
 
   <!-- JavaScript -->
 
-  {% if page.plotly %}
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
-    <script src="/assets/js/plotly_styles.js"></script>
-  {% endif %}
-
-
   {% unless site.theme_mode %}
     {% include mode-toggle.html %}
   {% endunless %}
+
+  {% if page.plotly %}
+    {% include plotly-defer.html %}
+  {% endif %}
 
   {% include metadata-hook.html %}
 </head>

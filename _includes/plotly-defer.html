@@ -1,0 +1,14 @@
+<!-- plotly defer code -->
+<script type="text/javascript">
+  // We will register Plotly functions here and they will be 
+  // executed after loading Plotly
+  var plotlyDeferredFuncArray = [];
+
+  /**
+   * This function defers the execution of a Plotly function until Plotly is loaded.
+   * @param {Function} plotFunc - The Plotly function to defer. This function should not accept any arguments and should return the promise from Plotly.newPlot().
+   */
+  function deferPlotly(plotFunc) {
+    plotlyDeferredFuncArray.push(plotFunc);
+  }
+</script>
