@@ -1,0 +1,11 @@
+---
+---
+
+@import 'main';
+
+/* append your custom style below */
+
+mjx-container[jax="SVG"] > svg a {
+    fill: var(--link-color) !important;
+    stroke: var(--link-color) !important;
+}
