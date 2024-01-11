@@ -13,11 +13,11 @@ mermaid: true
 plotly: true
 ---
 
-# Introduction
+## Introduction
 
 This post will show step-by-step when, how and why to use the [Least squares method](https://en.wikipedia.org/wiki/Least_squares). We will analyze the revenue of a company over the past 20 years and try to predict its future trajectory. This will lead us to a discussion of the [exponential least squares](https://mathworld.wolfram.com/LeastSquaresFittingExponential.html) fit. Let's start off with something simple.
 
-# Idealized case
+## Idealized case
 
 Imagine that you are given a set of revenue data for company *A*. The data is shown in the table below.
 
@@ -109,7 +109,7 @@ Now we can calculate $g\%$ for each year (only shown up till 2009):
 
 Great! It seems like we are done because we have found a constant value of $g\%=15\%$ which perfectly matches the data. Since this value held in the past we can assume that it will hold in the future as well.
 
-# Realistic case
+## Realistic case
 
 However, this data set is a bit idealized... in real life the revenue might not grow at a constant rate from year to year. It might increase or decrease based on the economy, management, political situation and so on. To account for this we can define $g_n\%$ as the precent growth from year $n$ to year $n+1$. Then we can improve \eqref{eq:growth_ratio} to get:
 
@@ -193,7 +193,7 @@ This gives us a $g_{CAGR}\% = 13\%$, but is it the best estimate? We can see on 
 
 The next problem we have is that least squares method tries to fit a straight line to the data, but our data bends upwards and is not a straight line! So what can we do? We can take advantage of the logarithm function!
 
-# Logarithm crash course
+## Logarithm crash course
 
 Here is a crash course on the [$\log()$](https://en.wikipedia.org/wiki/Logarithm) function and in particular on the natural logarithm. The natural logarithm is the inverse of the exponential function. In other words:
 
@@ -227,7 +227,7 @@ We can define constants $a = \log(1 + g\%)$ and $b = \log(R_{0})$, thus the $\lo
   \label{eq:revenue_log}
 \end{equation}
 
-# Using least squares method
+## Using least squares method
 
 A quick recap of where we are:
 1. We want to find a $g\%$ that best fits annual increase of revenue for company *B* to predict future revenue
@@ -491,6 +491,6 @@ You can see that depending on the dates chosen we can end up with a $\pm 3$ perc
 
 The least squares is also useful when designing physics/engineering experiment. By designing the experiment to search for a value that changes lineraly with another you can collect a lot of data and perform a fit on the measurment you are intereseted in. This allows you to reduce measurement error. In fact if you get to choose how much data you get and if you know something about the noise in your system, then you can bound how much variation in your fit ($\hat{a}$ and $\hat{b}$) you will get. This is a very powerful tool.
 
-# Conclusion
+## Conclusion
 
 I hope you, dear reader, have enjoyed this post and have had some benefit from it.
