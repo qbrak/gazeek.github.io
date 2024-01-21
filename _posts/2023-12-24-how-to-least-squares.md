@@ -13,6 +13,11 @@ mermaid: true
 plotly: true
 ---
 
+---
+
+> A lot of the main points of this post are **WRONG**. I will try to write a better version in the future. In the meantime, please read with caution.
+{: .prompt-tip }
+
 ## Introduction
 
 This post will show step-by-step when, how and why to use the [Least squares method](https://en.wikipedia.org/wiki/Least_squares). We will analyze the revenue of a company over the past 20 years and try to predict its future trajectory. This will lead us to a discussion of the [exponential least squares](https://mathworld.wolfram.com/LeastSquaresFittingExponential.html) fit. Let's start off with something simple.
