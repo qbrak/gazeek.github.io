@@ -10,8 +10,8 @@ This blog is a place where I write down my thoughts, in order to better understa
 
 Thus sometimes the posts will be wrong, and when I realize that, I will update them. I will try to make it clear when I am not sure about something.
 
-The name qbrak (pronounced "queue-brack" like "frack" but with a 'b') is a reference to many things. The main idea is connected with not being [Q](https://en.wikipedia.org/wiki/Q_(Star_Trek)), since the word "brak" means "without" in Polish. Since  [Q](https://en.wikipedia.org/wiki/Q_(Star_Trek)) is arrogant, all-knowing, all-powerfull what I wanted is to *not* be like that. Additionally, qbrak sounds like "kubrak" an old Polish word for jacket, so it's kinda funny.
+The name Q-knot is play-on-words/misspelling of Q-naught ($Q_0$). The letter [Q](https://en.wikipedia.org/wiki/Q_(Star_Trek)) is a reference to the Star Trek character who is arrogant, all-knowing, all-powerful, and I would like to *not* be like that. The homonym knot, and the associated logo, is a reference to what I would like to do with this blog: un-knot ideas to make them understandable.
 
-The logo was made starting with the word Q-naught ($Q_0$), again a reference to [Q](https://en.wikipedia.org/wiki/Q_(Star_Trek)) and not being him. Then Q-naught sounds like Q-knot hence the logo. It's also a reference to what I would like to do with this blog: un-knot ideas to make them understandable.
+The github name `qbrak` (pronounced "queue-brack" like "frack" but with a 'b') is again to not being [Q](https://en.wikipedia.org/wiki/Q_(Star_Trek)), since the word "brak" means "without" in Polish. Additionally, qbrak sounds like "kubrak" an older Polish word for jacket, so it's kinda funny.
 
 I hope you enjoy reading my blog.
