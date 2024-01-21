@@ -1,4 +1,4 @@
-# Gazeek's blog
+# Q-knot blog
 
 A simple mathy oriented blog based on [Chirpy Jekyll Theme](https://github.com/cotes2020/jekyll-theme-chirpy#documentation)
 
@@ -72,4 +72,4 @@ I would like to really thank @cotes2020 the creator of [Chirpy Jekyll Theme](htt
 
 This project is published under [MIT License][license].
 
-[license]: https://github.com/gazeek/gazeek.github.io/blob/main/LICENSE
+[license]: https://github.com/qbrak/qbrak.github.io/blob/main/LICENSE
