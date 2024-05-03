@@ -2,7 +2,7 @@
 title: Dual spaces as transposition
 date: 2024-05-02 16:40:33 +/- 0001
 categories: [Math, Linear Algebra, Intermediate]
-tags: [categorization]     # TAG names should always be lowercase
+tags: [categorization, explainer]     # TAG names should always be lowercase
 
 layout: post
 
