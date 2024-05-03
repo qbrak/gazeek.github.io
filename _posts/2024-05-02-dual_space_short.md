@@ -130,7 +130,7 @@ $$
 (v^*\circ T_w)(1)\stackrel{?}{=}<v,w>=v^Tw
 $$
 
-The last equation suggests that $v^* \sim v^T$, however, it only works for finite dimensional $V$, thus we will limit ourselves to this case from now on. Since $V$ is finite dimensional it has a [basis](https://en.wikipedia.org/wiki/Basis_(linear_algebra)) $B=\{b_i\}_{i=1}^n$. 
+The last equation suggests that $v^* \sim v^T$, however, it only works for finite dimensional $V$, thus we will limit ourselves to this case from now on. Since $V$ is finite dimensional it has a [basis](https://en.wikipedia.org/wiki/Basis_(linear_algebra)) $B=\\{b_i\\}_{i=1}^n$. 
 
 Using this basis we can define:
 
@@ -188,6 +188,7 @@ $$
 Since we've defined $v^{\*}$ let's come back to the inner product.
 
 Now, if $v,w\in V$ we can decompose them into:
+
 $$
 \begin{align*}
    & v = \sum_{i=1}^n \alpha_i b_i \\
@@ -196,6 +197,7 @@ $$
 $$
 
 We know that the inner product of $v$ and $w$ should be:
+
 $$
 <v,w>= \sum_{i=1}^n \alpha_i \beta_i
 $$
@@ -223,6 +225,7 @@ Let's break these equalities one-by-one:
 3. We decompose $v^{\*}$ in $B^{\*}$.
 4. We use the definition of addition in $V^{\*}$ from the lemma, i.e. for $v^{\*},w^{\*}\in V^{\*}$ we have $(v^{\*}+w^{\*})(u)=v^{\*}(u)+w^{\*}(u)$.
 5. We use the fact that:
+
    $$
    \varphi_{b_i}\circ T_{b_j} = 
     \begin{cases}
@@ -231,7 +234,7 @@ Let's break these equalities one-by-one:
     \end{cases}
    $$
 
-Great so in fact we got what we wanted, in that:
+Great so in fact we got what we wanted:
 
 $$
 <v,w>= (v^*\circ T_w)(1) = \left(\sum_{i=1}^n \alpha_i \beta_i \cdot id_K\right)(1) = \sum_{i=1}^n \alpha_i \beta_i 
