@@ -26,7 +26,7 @@ $$
 V^*:=\text{Hom}(V,K)
 $$
 
-Why would you want to think about spaces of linear transformations? It seems like an abstract and hard to grasp thing...
+Why would you want to think about spaces of linear transformations? It seems like an abstract and hard-to-grasp thing...
 
 I will try to show that elements of $ V^{\*}$ are kind of like [transposed](https://en.wikipedia.org/wiki/Transpose) elements of $V$. However, instead of showing how a [functional](https://en.wikipedia.org/wiki/Functional_(mathematics)) (an element of $ V^*:=\text{Hom}(V,K) $) is like a transposed vector, we will show that a vector can be thought of as a linear transformation, or to be more precise, a vector behaves like an element of $\text{Hom}(K,V)$. Intuitively, the idea is that the transposition of a column vector corresponds to the flipping of the roles of the domain and codomain:
 
@@ -61,7 +61,7 @@ Let's now investigate a bit more the structure of $V^{\*}$ and $\text{Hom}(K,V)$
 
 <b>Lemma 1.</b> <i>Let $V,W$ be vector spaces over field $K$.Then $\text{Hom}(V,W)$ is a vector space also over field $K$.</i>
 
-*Proof.* Let's proove this by ensuring that [vector space axioms](https://en.wikipedia.org/wiki/Vector_space#Definition_and_basic_properties) are met for $\text{Hom}(V,W)$. We define addition for $f,g\in \text{Hom}(V,W)$ on some element of $v\in V$ as:
+*Proof.* Let's prove this by ensuring that [vector space axioms](https://en.wikipedia.org/wiki/Vector_space#Definition_and_basic_properties) are met for $\text{Hom}(V,W)$. We define addition for $f,g\in \text{Hom}(V,W)$ on some element of $v\in V$ as:
 
 $$
 
@@ -75,7 +75,7 @@ $$
 (\lambda \underset{\text{Hom}(V,W)}{\cdot} f )(v)=\lambda \underset{W}{\cdot}f(v)
 $$
 
-Since both operations are defined using their behavior in $W$ we immediately get associativity, commutativity, distributivity of scalar multiplication. We also get the additive inverse and $0$ in $\text{Hom}(V,W)$, the latter is a function that is constantly equal to $0_W$. Thus,  $\text{Hom}(V,W)$ is a vector space. $\square$
+Since both operations are defined using their behavior in $W$ we immediately get associativity, commutativity, and distributivity of scalar multiplication. We also get the additive inverse and $0$ in $\text{Hom}(V,W)$, the latter is a function that is constantly equal to $0_W$. Thus,  $\text{Hom}(V,W)$ is a vector space. $\square$
 
 Since the field $K$ is a vector space itself, we can conclude that both $V^{\*}$ and $\text{Hom}(K,V)$ are vector spaces, with addition and multiplication by scalar defined as in the lemma. 
 
@@ -95,7 +95,7 @@ Here is a visual representation $\Lambda$:
 
 ## Numbers as linear transformations
 
-Right now it seems unclear how a linear transformation can be associated with a number. Thus, we need to figure out how to look at numbers differently. One way to think of them is that numbers contain information (e.g. 3 would mean there are 3 dogs in kennel, or $\sqrt{2}$ kg of wheat). This is the way [natural numbers are defined](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) when start from the empty set:
+Right now it seems unclear how a linear transformation can be associated with a number. Thus, we need to figure out how to look at numbers differently. One way to think of them is that numbers contain information (e.g. 3 would mean there are 3 dogs in a kennel, or $\sqrt{2}$ kg of wheat). This is the way [natural numbers are defined](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) when starting from the empty set:
 
 $$
 \begin{align*}
@@ -106,7 +106,7 @@ $$
  \end{align*}
 $$
 
-And then, for example using [equivalence classes](https://en.wikipedia.org/wiki/Integer#Equivalence_classes_of_ordered_pairs), we can go on to define $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$,etc....
+And then, for example, using [equivalence](https://en.wikipedia.org/wiki/Integer#Equivalence_classes_of_ordered_pairs) classes](https://en.wikipedia.org/wiki/Integer#Equivalence_classes_of_ordered_pairs), we can go on to define $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$, etc....
 
 However, instead of looking at numbers as counting something, we can think of them as linear transformations. For example:
 * $0$ is a transformation that transforms everything into itself (like the [Borg](https://en.wikipedia.org/wiki/Borg) XD)
@@ -116,7 +116,7 @@ However, instead of looking at numbers as counting something, we can think of th
 
 ## Showing $\Lambda$ is the inner product
 
-Coming back to the problem of inner products. Knowing this correspondence between numbers and linear transformations we can associate a number $k\in K$ with linear transformmation $\Lambda$. The most convenient way to do this is the following:
+Coming back to the problem of inner products. Knowing this correspondence between numbers and linear transformations we can associate a number $k\in K$ with linear transformation $\Lambda$. The most convenient way to do this is the following:
 
 $$
 k = \Lambda(1) = \varphi(T(1))
@@ -130,7 +130,7 @@ $$
 (v^*\circ T_w)(1)\stackrel{?}{=}<v,w>=v^Tw
 $$
 
-The last equation suggests that $v^* \sim v^T$, however, it only works for finite dimensional $V$, thus we will limit ourselves to this case from now on. Since $V$ is finite dimensional it has a [basis](https://en.wikipedia.org/wiki/Basis_(linear_algebra)) $B=\\{b_i\\}_{i=1}^n$. 
+The last equation suggests that $v^* \sim v^T$, however, it only works for finite-dimensional $V$, thus we will limit ourselves to this case from now on. Since $V$ is finite dimensional it has a [basis](https://en.wikipedia.org/wiki/Basis_(linear_algebra)) $B=\\{b_i\\}_{i=1}^n$. 
 
 Using this basis we can define:
 
@@ -148,7 +148,7 @@ $$
 \end{align*}
 $$
 
-It can be proven that $\varphi_{b_i}$ is well defined and $B^{\*}$ (called the [dual basis](https://en.wikipedia.org/wiki/Dual_basis)), $B_T$ are basis for their respective spaces. I will leave the proof as an excercise to the reader (if you have trouble this is all in [Linear Algebra Done Right](https://linear.axler.net/)).
+It can be proven that $\varphi_{b_i}$ is well defined and $B^{\*}$ (called the [dual basis](https://en.wikipedia.org/wiki/Dual_basis)), $B_T$ are basis for their respective spaces. I will leave the proof as an exercise for the reader (if you have trouble this is all in [Linear Algebra Done Right](https://linear.axler.net/)).
 
 To define $v^{\*}$ we can start by decomposing $v$ over $B$:
 
@@ -242,19 +242,21 @@ $$
 
 ## Generalization to matrices
 
-Without any justification I would like to finish by saying that this idea of the dual being the transposition also holds for linear transformations and their matrices.
+Without any justification, I would like to finish by saying that this idea of the dual being the transposition also holds for linear transformations and their matrices.
 For more info consult [Linear Algebra Done Right](https://linear.axler.net/).
 
-If we have a linear $F : V \rightarrow W$, then we can define a $F^* : W^* \rightarrow V^{\*}$, for every $w^* \in W^{\*}$:
+If we have a linear $F : V \rightarrow W$, then we can define a $F^* : W^* \rightarrow V^{\*}$ for every $w^* \in W^{\*}$:
 
 $$
 F^*(w^*) = w^* \circ F
 $$
 
-If you take a moment you will see that the types of these objects match. And then if $B_V$ is basis of $V$ and $B_W$ is a basis of $W$, and their corresponding dual basis are $B_{V^{\*}} $ of $V^{\*}$ and $V_{W^*}$ of $W^{\*}$. Then using the notation $m_{B_W}^{B_V}(F)$ to denote the matrix associated with $F$ with bases $B_V$ and $B_W$ we get:
+If you take a moment, you will see that the types of these objects match. 
+
+And then, if $B_V$ is a basis of $V$ and $B_W$ is a basis of $W$, their corresponding dual bases are $B_{V^{*}} $ of $V^{*}$ and $B_{W^*}$ of $W^{*}$. Then using the notation $m_{B_W}^{B_V}(F)$, to denote the matrix associated with $F$ with bases $B_V$ and $B_W$ we get:
 
 $$
 \left(m_{B_W}^{B_V}(F)\right)^T=m_{B_{V^*}}^{B_{W^*}}(F^*)
 $$
 
-Thus at least one reason to think about dualilty is to express inner product and transposition without talking about matrices. Freeing ourselves from matrices allows this approach to generalize well to [Hilbert spaces](https://en.wikipedia.org/wiki/Hilbert_space) where you can't just write a matrix.
+Thus at least one reason to think about duality is to express inner product and transposition without talking about matrices. Freeing ourselves from matrices allows this approach to generalize well to [Hilbert spaces](https://en.wikipedia.org/wiki/Hilbert_space), where you can't just write a matrix.
