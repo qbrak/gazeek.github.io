@@ -16,7 +16,9 @@ Open source books (a LOT of them): <https://www.intechopen.com/about-intechopen>
 * [Baumeister's](https://www.math.uni-frankfurt.de/~baumeist/) book on fixed points, metric projections, minimization (non-linear?) <https://www.math.uni-frankfurt.de/~baumeist/Nonex-Kap1.pdf> (manually need to change *.pdf to 1,2,3,4,5,7,8)
 * Book on convex optimization from Stanford: <https://web.stanford.edu/~boyd/cvxbook/>
 * [Probability Theory: the logic of science](http://www.med.mcgill.ca/epidemiology/hanley/bios601/GaussianModel/JaynesProbabilityTheory.pdf)
+* [Linear algebra done right](https://linear.axler.net/)
 * [Weak convergence (UTexas)](https://web.ma.utexas.edu/users/gordanz/notes/weak.pdf)
+* [Measure theory (Borell, Gotenburg) (e.g. complex measure)](https://www.math.chalmers.se/Math/Grundutb/GU/MAF440/H05/MeasureTheory.pdf)
 
 ## Transforms/Complex analysis
 * Cool Rice university course (with recorded lectures) on Mathematical Methods from the Physics department:
